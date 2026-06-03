@@ -1,9 +1,16 @@
-![Lama Blanket icon](icon.webp) 
-# Lama Blanket
+# ![Lama Blanket icon](icon.webp) Lama Blanket
 
 Lama Blanket is a desktop wrapper around [`llama.cpp`](https://github.com/ggml-org/llama.cpp)'s `llama-server`, built in Rust with [`egui`](https://github.com/emilk/egui).
 
 It is aimed at local model serving with a simple GUI for picking GGUF models, estimating reasonable launch settings, saving presets, and managing the server without having to remember terminal commands.
+
+
+## How to run
+
+1. Download [Lama Blanket](https://github.com/otacoo/lama-blanket/releases/latest).
+2. Download the `llama.cpp` binaries from the [`llama.cpp` repository](https://github.com/ggml-org/llama.cpp).
+3. Put the `llama.cpp` folder next to `lama-blanket.exe`.
+4. Run `lama-blanket.exe`.
 
 ## Features
 
@@ -20,11 +27,6 @@ It is aimed at local model serving with a simple GUI for picking GGUF models, es
 The project is currently stable and usable, only tested on Windows.\
 Some functionality, such as startup registration and the current tray behavior work, is Windows-focused.
 
-## How to run
-
-1. Download the `llama.cpp` binaries from the [`llama.cpp` repository](https://github.com/ggml-org/llama.cpp).
-2. Put the `llama.cpp` folder next to `lama-blanket.exe`, or put `lama-blanket.exe` inside your `llama.cpp` folder.
-3. Run `lama-blanket.exe`.
 
 ## How `llama-server` Is Found
 
