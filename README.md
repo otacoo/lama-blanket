@@ -53,6 +53,14 @@ For a release build:
 cargo build --release
 ```
 
+To create a release folder and zip in `dist/`:
+
+```powershell
+npm run dist
+```
+
+The generated zip contains Lama Blanket only. Users still need to download the `llama.cpp` binaries separately.
+
 ## How Presets Are Estimated
 
 The app uses heuristics from model metadata and detected hardware:

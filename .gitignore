@@ -1,5 +1,6 @@
 /target
 /llama.cpp
+dist/
 lama-blanket.json
 lama-blanket-presets.json
 llama-server.exe
