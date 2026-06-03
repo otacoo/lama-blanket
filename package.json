@@ -1,0 +1,12 @@
+{
+  "name": "lama-blanket",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Desktop wrapper around llama.cpp's llama-server",
+  "scripts": {
+    "dist": "powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1",
+    "dist:skip-build": "powershell -ExecutionPolicy Bypass -File scripts/package-release.ps1 -SkipBuild",
+    "sync-version": "node scripts/sync-version.mjs",
+    "version": "node scripts/sync-version.mjs"
+  }
+}

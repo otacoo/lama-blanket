@@ -4,5 +4,6 @@ lama-blanket.json
 lama-blanket-presets.json
 llama-server.exe
 *.gguf
+node_modules/
 Thumbs.db
 .DS_Store

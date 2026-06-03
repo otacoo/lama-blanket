@@ -15,6 +15,8 @@ use windows_sys::Win32::UI::WindowsAndMessaging::{
     IsIconic, SetForegroundWindow, ShowWindow, SW_RESTORE, SW_SHOW,
 };
 
+const APP_VERSION: &str = env!("CARGO_PKG_VERSION");
+
 pub enum AppEvent {
     ShowWindow,
     Quit,
@@ -599,7 +601,16 @@ impl eframe::App for LamaBlanketApp {
         });
 
         egui::TopBottomPanel::bottom("status_bar").show(ctx, |ui| {
-            ui.label(&self.status_msg);
+            ui.horizontal(|ui| {
+                ui.label(&self.status_msg);
+                ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                    ui.label(
+                        egui::RichText::new(format!("v{APP_VERSION}"))
+                            .weak()
+                            .monospace(),
+                    );
+                });
+            });
         });
 
         ctx.request_repaint_after(std::time::Duration::from_millis(500));
