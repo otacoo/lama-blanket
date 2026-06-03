@@ -1,0 +1,8 @@
+/target
+/llama.cpp
+lama-blanket.json
+lama-blanket-presets.json
+llama-server.exe
+*.gguf
+Thumbs.db
+.DS_Store

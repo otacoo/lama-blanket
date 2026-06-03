@@ -1,0 +1,26 @@
+[package]
+name = "lama-blanket"
+version = "0.1.0"
+edition = "2024"
+description = "Desktop wrapper around llama.cpp's llama-server"
+
+[dependencies]
+eframe = "0.28"
+egui = "0.28"
+rfd = "0.14"
+open = "5"
+sysinfo = "0.31"
+num_cpus = "1"
+nvml-wrapper = "0.10"
+ash = "0.37"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tray-icon = "0.19"
+muda = "0.15"
+image = { version = "0.25", default-features = false, features = ["png", "webp"] }
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52"
+raw-window-handle = "0.6"
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"] }
